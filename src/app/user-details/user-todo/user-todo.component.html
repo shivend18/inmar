@@ -1,0 +1,23 @@
+<div class="user-todo-component">
+  <div>
+    <div class="todo-check-box">
+      <mat-checkbox  color="primary" [disableRipple]="true" [(ngModel)]="isSelected" (change)="selectCompletedTask()" name="Show completed Todos">
+        Show completed Todos
+      </mat-checkbox>
+    </div>
+    <div class="todo-list-table">
+      <div class="table-header">
+        <div class="col1">User Name </div>
+        <div class="col2">User Todo task </div>
+        <div class="col3">Completed</div>
+      </div>
+    <div class="table-data" *ngFor="let listItem of viewTodoList">
+      <div class="col1">{{listItem.name}}</div>
+      <div class="col2">{{listItem.title}}</div>
+      <div class="col3">{{listItem.completed}}</div>
+    </div>
+    </div>
+  </div>
+
+</div>
+

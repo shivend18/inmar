@@ -1,0 +1,29 @@
+.user-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .user-login-content{
+    padding: 10px 10px 20px 20px;
+    width: 300px;
+    border: 1px dashed #999999;
+    border-radius: 10px;
+    .user-login-header{
+      padding: 10px 0;
+      font-size: 18px;
+    }
+    .user-login-body{
+      height: 150px;
+      .error-message{
+        font-size: 12px;
+        color: #F52626;
+      }
+    }
+    .user-login-button{
+      span{
+        padding-right: 15px;
+      }
+    }
+  }
+
+}

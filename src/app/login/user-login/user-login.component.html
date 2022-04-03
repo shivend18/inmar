@@ -1,0 +1,32 @@
+<div class="user-login">
+  <div class="user-login-content">
+    <div class="user-login-header">
+      User login
+    </div>
+    <div class="user-login-body">
+      <form [formGroup]="loginValidationForm">
+        <mat-form-field>
+          <input matInput type="text" required [(ngModel)]="userName" placeholder="User name" formControlName="userName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" required [(ngModel)]="password" placeholder="Password" formControlName="password">
+        </mat-form-field>
+      </form>
+      <div class="error-message" *ngIf="messageString">
+        {{messageString}}
+      </div>
+    </div>
+    <div class="user-login-button">
+      <span>
+        <button mat-raised-button color="primary" [disabled]="disabledSaveEditButton()" (click)="userLogin()">Login</button>
+      </span>
+      <span>
+        <button mat-raised-button (click)="clear()">cancel</button>
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
